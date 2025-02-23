@@ -40,8 +40,8 @@ if uploaded_file is not None:
         st.dataframe(df[['text']])  # Mostrar solo la columna 'text'
 
         # Muestra aleatoria controlable
-        sample_size = st.slider("Cantidad de datos a mostrar", 1, len(df), 30)
-        random_state = random.randint(1, 100)  # Estado aleatorio para reproducibilidad
+        sample_size = st.slider("Cantidad de datos a analizar", 1, len(df), 30)
+        random_state = random.randint(1, 10)  # Estado aleatorio para reproducibilidad
         df_sample = df.sample(n=sample_size, random_state=random_state)  # Muestra aleatoria
 
         st.write("### 📌 Muestra de Datos")
